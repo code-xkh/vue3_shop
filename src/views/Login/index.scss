@@ -1,0 +1,19 @@
+.login-container {
+  position: relative;
+  height: 100%;
+  background-image: linear-gradient(to right, #eec2fb, #a6adee);
+}
+
+.login-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #fff;
+  h2 {
+    margin-bottom: 50px;
+  }
+}

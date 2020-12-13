@@ -1,1 +1,20 @@
 @import './normalize.scss';
+body {
+  height: 100%;
+}
+#app {
+  height: 100%;
+}
+// 文本居中
+.text-center {
+  text-align: center;
+}
+// 百分比宽度
+.w-90 {
+  width: 90%;
+}
+// marin式居中
+.mar-center {
+  display: block;
+  margin: 0 auto;
+}
