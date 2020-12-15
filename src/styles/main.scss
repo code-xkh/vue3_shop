@@ -18,3 +18,15 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+// flex交叉轴居中，主轴space-between
+.flex-space-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// box-shadow
+@mixin boxshadow($x, $y) {
+  box-shadow: $x $y 5px rgba(0, 0, 0, 0.12);
+}

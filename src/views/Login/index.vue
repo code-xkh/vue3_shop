@@ -30,8 +30,8 @@ export default {
     const { $msg, $http, $router } = getCurrentInstance().ctx
     // 表单对象
     const loginForm = reactive({
-      username: '',
-      password: ''
+      username: 'admin',
+      password: '123456'
     })
     const loginFormRef = ref(null)
     // 登录
