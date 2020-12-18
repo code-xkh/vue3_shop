@@ -3,7 +3,7 @@
     <div class="login-wrap">
       <h2 class="text-center">登录</h2>
       <!-- 登录表单 -->
-      <el-form class="w-90 mar-center" ref="loginFormRef" :model="loginForm" :rules="rules">
+      <el-form class="w-90 mar-center" ref="loginFormRef" :model="loginForm" :rules="LoginFormRules">
         <el-form-item prop="username">
           <el-input class="w-90 mar-center" type="text" v-model="loginForm.username" autocomplete="off"
             prefix-icon="el-icon-user" placeholder="用户名"></el-input>
@@ -23,7 +23,7 @@
 
 <script>
 import { getCurrentInstance, reactive, ref } from 'vue'
-import { rules } from '../../util/rules'
+import LoginFormRules from '../../util/rules'
 export default {
   name: 'Login',
   setup () {
@@ -48,7 +48,7 @@ export default {
         $router.push('/home')
       })
     }
-    return { loginForm, rules, login, loginFormRef }
+    return { loginForm, LoginFormRules, login, loginFormRef }
   }
 }
 </script>
