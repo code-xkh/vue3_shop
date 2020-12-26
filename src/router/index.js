@@ -23,7 +23,7 @@ const routes = [
       { path: '/categories', component: () => import('../views/Goods/Cate/index.vue') },
       { path: '/params', component: () => import('../views/Goods/Params/index.vue') },
       { path: '/goods', component: () => import('../views/Goods/List/index.vue') },
-      // { path: '/goods/add', component: () => import('../views/Goods/index.vue') },
+      { path: '/goods/add', component: () => import('../views/Goods/Add/index.vue') },
       { path: '/orders', component: () => import('../views/Order/index.vue') },
       { path: '/reports', component: () => import('../views/Report/index.vue') }
     ]

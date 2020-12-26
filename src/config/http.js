@@ -73,6 +73,7 @@ const getRoleList = async (state) => {
   // console.log('res.data :>> ', res.data)
 }
 
+<<<<<<< HEAD
 // 添加角色请求
 const addRoleReq = async (params) => {
   const { data: res } = await $http.post('roles', params)
@@ -128,3 +129,22 @@ const removeRoleRight = async (roleId, rightId) => {
 }
 
 export { getMenulist, getUserList, addUserReq, changeUserState, queryUserDetail, editUserReq, deleteUserReq, assignRoleReq, getRoleList, addRoleReq, queryRole, editRoleReq, deleteRoleReq, getRightsList, allotRightsReq, removeRoleRight }
+=======
+// 获取商品列表数据
+const getGoodsList = async (state) => {
+  const { data: res } = await $http.get('goods', { params: state.queryInfo })
+  // console.log(res)
+  if (res.meta.status !== 200) return $msg.error('获取商品列表数据失败！')
+  state.goodsList = res.data.goods
+  state.total = res.data.total
+}
+
+// 删除商品
+const deleteGoodsReq = async (id) => {
+  const { data: res } = await $http.delete(`goods/${id}`)
+  if (res.meta.status !== 200) return $msg.error('删除商品失败！')
+  $msg.success('删除商品成功！')
+}
+
+export { getMenulist, getUserList, addUserReq, changeUserState, queryUserDetail, editUserReq, deleteUserReq, assignRoleReq, getRoleList, getGoodsList, deleteGoodsReq }
+>>>>>>> goods_list
